@@ -246,7 +246,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Canopy load" id="BKT-Sc-nHR">
-                        <barButtonItem key="rightBarButtonItem" title="list" id="8ZX-vq-yiZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="list" id="8ZX-vq-yiZ">
+                            <connections>
+                                <segue destination="jKZ-8A-cdx" kind="push" identifier="LoadListSegue" id="Ysy-Wg-P8g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="canopyLoad" destination="OVo-gD-fhp" id="Cxe-Zm-PqO"/>
@@ -260,6 +264,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="296" y="26"/>
+        </scene>
+        <!--Load List View Controller-->
+        <scene sceneID="Ajg-XG-tV5">
+            <objects>
+                <tableViewController id="jKZ-8A-cdx" customClass="LoadListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZIf-2Z-r4O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoadCell" textLabel="3wX-ev-j54" detailTextLabel="gB6-uw-QRV" style="IBUITableViewCellStyleValue1" id="ARZ-WJ-Iu9">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARZ-WJ-Iu9" id="W63-7c-ItP">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3wX-ev-j54">
+                                            <rect key="frame" x="15" y="11" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gB6-uw-QRV">
+                                            <rect key="frame" x="261" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jKZ-8A-cdx" id="7KP-wd-JsL"/>
+                            <outlet property="delegate" destination="jKZ-8A-cdx" id="FsA-mA-WsG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Gjo-rv-w15"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyq-tt-7Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fxJ-1z-n7P">

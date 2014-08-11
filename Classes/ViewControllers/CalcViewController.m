@@ -7,6 +7,7 @@
 //
 
 #import "CalcViewController.h"
+#import "LoadListViewController.h"
 
 #define LBSinKG 2.204622622
 
@@ -57,6 +58,7 @@
 - (void)loadValues {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setMinimumIntegerDigits:1];
     [formatter setMaximumFractionDigits:1];
     
     NSNumber *canopySize = [defaults objectForKey:@"canopySize"];
@@ -99,6 +101,7 @@
 
 - (IBAction)metricValuesChanged:(id)sender {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setMinimumIntegerDigits:1];
     [formatter setMaximumFractionDigits:1];
     
     double massMetric = [[formatter numberFromString:self.massMetric.text] doubleValue];
@@ -122,6 +125,7 @@
 
 - (IBAction)imperialValuesChanged:(id)sender {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setMinimumIntegerDigits:1];
     [formatter setMaximumFractionDigits:1];
     
     double massImperial = [[formatter numberFromString:self.massImperial.text] doubleValue];
@@ -145,6 +149,7 @@
 
 - (IBAction)canopyChanged:(id)sender {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setMinimumIntegerDigits:1];
     [formatter setMaximumFractionDigits:2];
     
     double massImperial = [[formatter numberFromString:self.massImperial.text] doubleValue];
@@ -168,6 +173,17 @@
     self.canopySize.text = [formatter stringFromNumber:@(canopySize)];
     
     [self saveValues];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"LoadListSegue"]) {
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setMaximumFractionDigits:2];
+        
+        LoadListViewController *listVc = (LoadListViewController *)[segue destinationViewController];
+        listVc.chosenWeight = [[formatter numberFromString:self.massImperial.text] doubleValue] + [[formatter numberFromString:self.gearImperial.text] doubleValue];
+        listVc.chosenCanopy = [[formatter numberFromString:self.canopySize.text] doubleValue];
+    }
 }
 
 @end
