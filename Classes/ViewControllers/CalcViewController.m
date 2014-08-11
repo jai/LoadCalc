@@ -1,20 +1,20 @@
 //
-//  ViewController.m
+//  CalcViewController.m
 //  LoadCalc
 //
 //  Created by Evgeny Aleksandrov on 15/07/14.
 //  Copyright (c) 2014 Ferret Syndicate. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CalcViewController.h"
 
 #define LBSinKG 2.204622622
 
-@interface ViewController ()
+@interface CalcViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CalcViewController
 
 #pragma mark - View lifecycle
 

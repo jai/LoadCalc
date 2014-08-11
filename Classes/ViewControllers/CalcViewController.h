@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CalcViewController.h
 //  LoadCalc
 //
 //  Created by Evgeny Aleksandrov on 15/07/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "APLKeyboardControls.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface CalcViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *massMetric;
 @property (nonatomic, weak) IBOutlet UITextField *massImperial;
