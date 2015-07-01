@@ -15,8 +15,8 @@
 		555CCEFF197527DE0093034B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEF5197527DE0093034B /* AppDelegate.m */; };
 		555CCF00197527DE0093034B /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEF8197527DE0093034B /* CalcViewController.m */; };
 		555CCF02197527DE0093034B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEFC197527DE0093034B /* main.m */; };
-		557A14B01B43287800CF30AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557A14AF1B43287800CF30AC /* LaunchScreen.xib */; };
 		557F072D1998F4D600F45D6A /* LoadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F072C1998F4D600F45D6A /* LoadListViewController.m */; };
+		55C93FD21B442FA900BCCDD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C93FD11B442FA900BCCDD3 /* LaunchScreen.storyboard */; };
 		D0A29A6C694A4B8FA90BD7E8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CE0F6A225844808895824F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +33,10 @@
 		555CCEF8197527DE0093034B /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 		555CCEFA197527DE0093034B /* LoadCalc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LoadCalc-Info.plist"; sourceTree = "<group>"; };
 		555CCEFC197527DE0093034B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		557A14AF1B43287800CF30AC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		557F072B1998F4D600F45D6A /* LoadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadListViewController.h; sourceTree = "<group>"; };
 		557F072C1998F4D600F45D6A /* LoadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadListViewController.m; sourceTree = "<group>"; };
 		55C93FCF1B44299500BCCDD3 /* autoupdate-revision.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "autoupdate-revision.sh"; sourceTree = "<group>"; };
+		55C93FD11B442FA900BCCDD3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63CE0F6A225844808895824F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8988E24AE3344AE5C979CD5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B180651FA2CE58522FE81B47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			children = (
 				555CCEF1197527DE0093034B /* Images.xcassets */,
 				555CCEF2197527DE0093034B /* Main.storyboard */,
-				557A14AF1B43287800CF30AC /* LaunchScreen.xib */,
+				55C93FD11B442FA900BCCDD3 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				555CCEFE197527DE0093034B /* Main.storyboard in Resources */,
-				557A14B01B43287800CF30AC /* LaunchScreen.xib in Resources */,
+				55C93FD21B442FA900BCCDD3 /* LaunchScreen.storyboard in Resources */,
 				555CCEFD197527DE0093034B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
