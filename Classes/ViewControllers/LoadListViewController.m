@@ -67,13 +67,13 @@
     
     if([cellLoad doubleValue] < 1.0f) {
         [cell.detailTextLabel setTextColor:[UIColor colorWithRed:46.0/255.0f green:139.0/255.0f blue:87.0/255.0f alpha:1.0f]];
-    } else if([cellLoad doubleValue] < 1.3f) {
+    } else if([cellLoad doubleValue] < 1.2f) {
+        [cell.detailTextLabel setTextColor:[UIColor colorWithRed:30.0/255.0f green:144.0/255.0f blue:255.0/255.0f alpha:1.0f]];
+    } else if([cellLoad doubleValue] < 1.35f) {
         [cell.detailTextLabel setTextColor:[UIColor blueColor]];
     } else if([cellLoad doubleValue] < 1.5f) {
-        [cell.detailTextLabel setTextColor:[UIColor colorWithRed:30.0/255.0f green:144.0/255.0f blue:255.0/255.0f alpha:1.0f]];
-    } else if([cellLoad doubleValue] < 1.7f) {
         [cell.detailTextLabel setTextColor:[UIColor colorWithRed:250.0/255.0f green:128.0/255.0f blue:114.0/255.0f alpha:1.0f]];
-    } else if([cellLoad doubleValue] < 1.7f) {
+    } else if([cellLoad doubleValue] < 1.8f) {
         [cell.detailTextLabel setTextColor:[UIColor colorWithRed:255.0/255.0f green:127.0/255.0f blue:80.0/255.0f alpha:1.0f]];
     } else if([cellLoad doubleValue] < 2.0f) {
         [cell.detailTextLabel setTextColor:[UIColor colorWithRed:255.0/255.0f green:99.0/255.0f blue:71.0/255.0f alpha:1.0f]];
