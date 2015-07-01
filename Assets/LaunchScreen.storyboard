@@ -226,9 +226,7 @@
                             <constraint firstItem="Zx3-9p-yID" firstAttribute="height" secondItem="b1k-LQ-qfD" secondAttribute="height" id="xwC-xm-j5U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Canopy load" id="Meb-I2-d51">
-                        <barButtonItem key="rightBarButtonItem" title="list" id="tJU-YN-fNe"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Meb-I2-d51"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKe-hW-R0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,6 +240,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Sq-h2-g9r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

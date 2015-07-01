@@ -6,6 +6,7 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'APLKeyboardControls'
+pod 'ChameleonFramework'
 
 # Only for development
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']

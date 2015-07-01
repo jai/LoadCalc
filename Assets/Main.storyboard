@@ -293,7 +293,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoadCell" textLabel="3wX-ev-j54" detailTextLabel="gB6-uw-QRV" style="IBUITableViewCellStyleValue1" id="ARZ-WJ-Iu9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoadCell" textLabel="3wX-ev-j54" detailTextLabel="gB6-uw-QRV" style="IBUITableViewCellStyleValue1" id="ARZ-WJ-Iu9" customClass="SizeTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARZ-WJ-Iu9" id="W63-7c-ItP">
@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="735" y="26"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Colored Navigation Controller-->
         <scene sceneID="fxJ-1z-n7P">
             <objects>
-                <navigationController definesPresentationContext="YES" id="dje-Dy-egW" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="dje-Dy-egW" customClass="ColoredNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hv8-Ui-g17">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

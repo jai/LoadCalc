@@ -5,6 +5,7 @@
 
 #import "CalcViewController.h"
 #import "LoadListViewController.h"
+#import <ChameleonFramework/Chameleon.h>
 
 #define LBSinKG 2.204622622
 
@@ -30,7 +31,16 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
+    [self configureColors];
     [self loadValues];
+}
+
+- (void)configureColors {
+    self.navigationController.navigationBar.barTintColor = [UIColor flatBlackColor];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:self.navigationController.navigationBar.barTintColor isFlat:NO];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithContrastingBlackOrWhiteColorOn:self.navigationController.navigationBar.barTintColor isFlat:NO]};
 }
 
 #pragma mark - UITextField delegate
