@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Canopy load-->
+        <!--Wing load-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CalcViewController" sceneMemberID="viewController">
@@ -264,7 +264,7 @@
                             <constraint firstItem="8XK-oM-KKJ" firstAttribute="top" secondItem="NNf-8Q-Aqc" secondAttribute="bottom" id="zSP-v9-Htc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Canopy load" id="BKT-Sc-nHR">
+                    <navigationItem key="navigationItem" title="Wing load" id="BKT-Sc-nHR">
                         <barButtonItem key="rightBarButtonItem" title="list" id="8ZX-vq-yiZ">
                             <connections>
                                 <segue destination="jKZ-8A-cdx" kind="push" identifier="LoadListSegue" id="Ysy-Wg-P8g"/>
