@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		555CCEFF197527DE0093034B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEF5197527DE0093034B /* AppDelegate.m */; };
 		555CCF00197527DE0093034B /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEF8197527DE0093034B /* CalcViewController.m */; };
 		555CCF02197527DE0093034B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555CCEFC197527DE0093034B /* main.m */; };
+		557A14B01B43287800CF30AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557A14AF1B43287800CF30AC /* LaunchScreen.xib */; };
 		557F072D1998F4D600F45D6A /* LoadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557F072C1998F4D600F45D6A /* LoadListViewController.m */; };
 		D0A29A6C694A4B8FA90BD7E8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CE0F6A225844808895824F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -34,10 +35,12 @@
 		555CCEFA197527DE0093034B /* LoadCalc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LoadCalc-Info.plist"; sourceTree = "<group>"; };
 		555CCEFB197527DE0093034B /* LoadCalc-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LoadCalc-Prefix.pch"; sourceTree = "<group>"; };
 		555CCEFC197527DE0093034B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		557A14AF1B43287800CF30AC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		557F072B1998F4D600F45D6A /* LoadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadListViewController.h; sourceTree = "<group>"; };
 		557F072C1998F4D600F45D6A /* LoadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadListViewController.m; sourceTree = "<group>"; };
 		63CE0F6A225844808895824F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE57EE9580A14AB8949E6968 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		8988E24AE3344AE5C979CD5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B180651FA2CE58522FE81B47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +66,7 @@
 				555CCEF9197527DE0093034B /* Supporting-files */,
 				555CCEBA197527560093034B /* Frameworks */,
 				555CCEB9197527560093034B /* Products */,
-				AE57EE9580A14AB8949E6968 /* Pods.xcconfig */,
+				7444F992B55A9195BB1CCEEF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +95,7 @@
 			children = (
 				555CCEF1197527DE0093034B /* Images.xcassets */,
 				555CCEF2197527DE0093034B /* Main.storyboard */,
+				557A14AF1B43287800CF30AC /* LaunchScreen.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -127,6 +131,15 @@
 			path = "Supporting-files";
 			sourceTree = "<group>";
 		};
+		7444F992B55A9195BB1CCEEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B180651FA2CE58522FE81B47 /* Pods.debug.xcconfig */,
+				8988E24AE3344AE5C979CD5F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,15 +169,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Ferret Syndicate";
+				ORGANIZATIONNAME = "Evgeny Aleksandrov";
 				TargetAttributes = {
 					555CCEB7197527560093034B = {
-						DevelopmentTeam = QH8R2LYHSH;
+						DevelopmentTeam = 5567X9EQ9Q;
 					};
 				};
 			};
 			buildConfigurationList = 555CCEB3197527560093034B /* Build configuration list for PBXProject "LoadCalc" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -187,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				555CCEFE197527DE0093034B /* Main.storyboard in Resources */,
+				557A14B01B43287800CF30AC /* LaunchScreen.xib in Resources */,
 				555CCEFD197527DE0093034B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -313,10 +327,9 @@
 		};
 		555CCEEB197527560093034B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE57EE9580A14AB8949E6968 /* Pods.xcconfig */;
+			baseConfigurationReference = B180651FA2CE58522FE81B47 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -330,10 +343,9 @@
 		};
 		555CCEEC197527560093034B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE57EE9580A14AB8949E6968 /* Pods.xcconfig */;
+			baseConfigurationReference = 8988E24AE3344AE5C979CD5F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
