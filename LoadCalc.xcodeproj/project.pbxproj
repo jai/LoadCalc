@@ -25,7 +25,6 @@
 		555CCEBB197527560093034B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		555CCEBD197527560093034B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		555CCEBF197527560093034B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		555CCEDA197527560093034B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		555CCEF1197527DE0093034B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		555CCEF2197527DE0093034B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		555CCEF4197527DE0093034B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,7 +32,6 @@
 		555CCEF7197527DE0093034B /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
 		555CCEF8197527DE0093034B /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 		555CCEFA197527DE0093034B /* LoadCalc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LoadCalc-Info.plist"; sourceTree = "<group>"; };
-		555CCEFB197527DE0093034B /* LoadCalc-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LoadCalc-Prefix.pch"; sourceTree = "<group>"; };
 		555CCEFC197527DE0093034B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		557A14AF1B43287800CF30AC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		557F072B1998F4D600F45D6A /* LoadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadListViewController.h; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				555CCEBB197527560093034B /* Foundation.framework */,
 				555CCEBD197527560093034B /* CoreGraphics.framework */,
 				555CCEBF197527560093034B /* UIKit.framework */,
-				555CCEDA197527560093034B /* XCTest.framework */,
 				63CE0F6A225844808895824F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -125,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				555CCEFA197527DE0093034B /* LoadCalc-Info.plist */,
-				555CCEFB197527DE0093034B /* LoadCalc-Prefix.pch */,
 				555CCEFC197527DE0093034B /* main.m */,
 			);
 			path = "Supporting-files";
@@ -332,8 +328,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Supporting-files/LoadCalc-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting-files/LoadCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -348,8 +342,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Supporting-files/LoadCalc-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting-files/LoadCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

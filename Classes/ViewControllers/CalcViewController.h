@@ -1,10 +1,7 @@
 //
 //  CalcViewController.h
-//  LoadCalc
 //
-//  Created by Evgeny Aleksandrov on 15/07/14.
-//  Copyright (c) 2014 Ferret Syndicate. All rights reserved.
-//
+//  Copyright (c) 2015 Evgeny Aleksandrov. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import "APLKeyboardControls.h"
@@ -18,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *canopySize;
 @property (nonatomic, weak) IBOutlet UITextField *canopyLoad;
 
+@property (nonatomic, strong) NSLayoutConstraint *bottomConstraint;
 @property (nonatomic, strong) APLKeyboardControls *keyboardControls;
 
 @end

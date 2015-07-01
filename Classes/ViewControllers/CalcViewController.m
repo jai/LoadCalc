@@ -1,10 +1,7 @@
 //
 //  CalcViewController.m
-//  LoadCalc
 //
-//  Created by Evgeny Aleksandrov on 15/07/14.
-//  Copyright (c) 2014 Ferret Syndicate. All rights reserved.
-//
+//  Copyright (c) 2015 Evgeny Aleksandrov. All rights reserved.
 
 #import "CalcViewController.h"
 #import "LoadListViewController.h"
@@ -21,11 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     NSArray* inputChain = @[self.massMetric, self.massImperial, self.gearMetric, self.gearImperial, self.canopySize, self.canopyLoad];
     self.keyboardControls = [[APLKeyboardControls alloc] initWithInputFields:inputChain];
     self.keyboardControls.hasPreviousNext = YES;
+    
+    self.bottomConstraint = [NSLayoutConstraint constraintWithItem:self.canopySize attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomLayoutGuide attribute:NSLayoutAttributeTop multiplier:1 constant:-5];
+    self.bottomConstraint.priority = 995;
+    [self.view addConstraint:self.bottomConstraint];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
     [self loadValues];
 }
@@ -51,6 +54,20 @@
     }
     
     return newLength <= 4 || returnKey || backspaceKey;
+}
+
+#pragma mark - Notification Handlers
+
+- (void)keyboardWillShow:(NSNotification *)sender {
+    CGRect frame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGRect newFrame = [self.view convertRect:frame fromView:[[UIApplication sharedApplication] delegate].window];
+    self.bottomConstraint.constant = newFrame.origin.y - CGRectGetHeight(self.view.frame) - 5;
+    [self.view layoutIfNeeded];
+}
+
+- (void)keyboardWillHide:(NSNotification *)sender {
+    self.bottomConstraint.constant = - 5;
+    [self.view layoutIfNeeded];
 }
 
 #pragma mark - Private - save/load

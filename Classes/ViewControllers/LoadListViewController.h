@@ -1,10 +1,7 @@
 //
 //  LoadListViewController.h
-//  LoadCalc
 //
-//  Created by Evgeny Aleksandrov on 11/08/14.
-//  Copyright (c) 2014 Ferret Syndicate. All rights reserved.
-//
+//  Copyright (c) 2015 Evgeny Aleksandrov. All rights reserved.
 
 #import <UIKit/UIKit.h>
 
