@@ -36,6 +36,7 @@
 		557A14AF1B43287800CF30AC /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		557F072B1998F4D600F45D6A /* LoadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadListViewController.h; sourceTree = "<group>"; };
 		557F072C1998F4D600F45D6A /* LoadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadListViewController.m; sourceTree = "<group>"; };
+		55C93FCF1B44299500BCCDD3 /* autoupdate-revision.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "autoupdate-revision.sh"; sourceTree = "<group>"; };
 		63CE0F6A225844808895824F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8988E24AE3344AE5C979CD5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B180651FA2CE58522FE81B47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		555CCEAF197527560093034B = {
 			isa = PBXGroup;
 			children = (
+				55C93FCE1B44299500BCCDD3 /* Scripts */,
 				555CCEF3197527DE0093034B /* Classes */,
 				555CCEF0197527DE0093034B /* Assets */,
 				555CCEF9197527DE0093034B /* Supporting-files */,
@@ -127,6 +129,14 @@
 			path = "Supporting-files";
 			sourceTree = "<group>";
 		};
+		55C93FCE1B44299500BCCDD3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				55C93FCF1B44299500BCCDD3 /* autoupdate-revision.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		7444F992B55A9195BB1CCEEF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 				555CCEB5197527560093034B /* Frameworks */,
 				555CCEB6197527560093034B /* Resources */,
 				A3CDD0EFC1654E33BDC6331E /* Copy Pods Resources */,
+				55C93FD01B4429BB00BCCDD3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +215,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		55C93FD01B4429BB00BCCDD3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh Scripts/autoupdate-revision.sh";
+		};
 		75669CCAD4154B09A5030F65 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
