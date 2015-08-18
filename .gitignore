@@ -33,3 +33,4 @@ Pods
 LoadCalc.app.dSYM.zip
 LoadCalc.ipa
 fastlane/screenshots
+fastlane/report.xml
