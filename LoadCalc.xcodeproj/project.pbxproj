@@ -177,6 +177,7 @@
 				555CCEB6197527560093034B /* Resources */,
 				A3CDD0EFC1654E33BDC6331E /* Copy Pods Resources */,
 				55C93FD01B4429BB00BCCDD3 /* ShellScript */,
+				55E78D331B839057000F1D4F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +246,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "sh Scripts/autoupdate-revision.sh";
+		};
+		55E78D331B839057000F1D4F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 1f2826a12152fb3b621891522f89b5ccf16fd513 193e15e7393529fc3bb8c922f8c325cef93e61f53e7e894bf0865a80e443c886";
 		};
 		75669CCAD4154B09A5030F65 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -5,6 +5,8 @@
 
 #import "AppDelegate.h"
 #import <SimulatorStatusMagic/SDStatusBarManager.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
@@ -13,6 +15,8 @@
     NSString *bundleShortVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSString *bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     NSLog(@"Starting %@ v%@ (%@)", bundleId, bundleShortVersion, bundleVersion);
+    
+    [Fabric with:@[CrashlyticsKit]];
     
 #ifdef SNAPSHOT
     [[SDStatusBarManager sharedInstance] enableOverrides];
