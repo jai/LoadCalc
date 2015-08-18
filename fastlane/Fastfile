@@ -14,7 +14,7 @@ platform :ios do
     # Clean up
     system "(cd ../; (rm -f #{ENV['SCHEME']}.app.dSYM.zip) )"
     system "(cd ../; (rm -f #{ENV['SCHEME']}.ipa) )"
-    
+
     cocoapods
     sigh
     gym(scheme: ENV["SCHEME"])
@@ -22,15 +22,40 @@ platform :ios do
 
   desc "Submit a new Beta Build to Apple TestFlight"
   lane :beta do
+    deliver(beta: true)
+  end
+
+  desc "Submit a new Build with metadata to iTunes Connect"
+  lane :appstore do
     snapshot
-    deliver(skip_deploy: true, beta: true)
+    deliver(skip_deploy: true)
+  end
+  
+  desc "Uploads metadata only - no ipa file will be uploaded"
+  lane :upload_metadata do
+    snapshot
+    deliver(metadata_only: true)
   end
 
   after_all do |lane|
-    slack({
-        message: "#{ENV['SCHEME']} beta successfully uploaded!",
-        success: true
-      })
+    message = nil
+    
+    case lane
+    when :beta
+      message = "Deployed #{ENV['SCHEME']} build to Apple TestFlight"
+    when :appstore
+      message = "Uploaded #{ENV['SCHEME']} build and metadata to iTunes Connect"
+    when :upload_metadata
+      message = "Uploaded #{ENV['SCHEME']} metadata to iTunes Connect"
+    end
+
+    if message
+      slack({
+          message: message,
+          success: true
+        })
+    end
+    
   end
 
   error do |lane, exception|

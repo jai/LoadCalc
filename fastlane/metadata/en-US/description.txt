@@ -1,1 +1,8 @@
-Calculates your parachute's wing load, which depends on your weight, your gear's weight and on your canopy's size.
+This tool helps you calculate your wing load (based on your weight, gear's weight and on canopy's size) and shows a table for comparing wing load on different wing sizes.
+
+* Weight in metric or imperial units
+* Live update when changing any parameter
+* Changing weight -> updates loading
+* Changing canopy size -> updates loading
+* Changing loading -> updates canopy size
+* Clear table for quick wing loading comparsion

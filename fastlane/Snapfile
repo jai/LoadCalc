@@ -6,15 +6,15 @@ devices([
 ])
 
 languages([
-  'en-US'
-#  'de-DE',
+  'en-US',
+#  'de-DE'
 #  'it-IT',
 #  'es-ES',
 #  'fr-FR',
 #  'ja-JP',
 #  'ko-KR',
 #  'pt-PT',
-#  'ru-RU',
+  'ru-RU'
 #  'cmn-Hans',
 #  'cmn-Hant'
 ])
