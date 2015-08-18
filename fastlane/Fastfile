@@ -1,0 +1,39 @@
+fastlane_version "1.18.0"
+
+default_platform :ios
+
+
+platform :ios do
+
+  before_all do
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+    
+    ENV["SCHEME"] = "LoadCalc"
+    ENV["SNAPSHOT_SCHEME"] = ENV["SCHEME"]
+    
+    # Clean up
+    system "(cd ../; (rm -f #{ENV['SCHEME']}.app.dSYM.zip) )"
+    system "(cd ../; (rm -f #{ENV['SCHEME']}.ipa) )"
+    
+    cocoapods
+    sigh
+    gym(scheme: ENV["SCHEME"])
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  lane :beta do
+    snapshot
+    deliver(skip_deploy: true, beta: true)
+  end
+
+  after_all do |lane|
+    slack({
+        message: "#{ENV['SCHEME']} beta successfully uploaded!",
+        success: true
+      })
+  end
+
+  error do |lane, exception|
+    # Something bad happened
+  end
+end

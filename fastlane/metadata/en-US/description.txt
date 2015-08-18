@@ -1,0 +1,1 @@
+Calculates your parachute's wing load, which depends on your weight, your gear's weight and on your canopy's size.

@@ -1,0 +1,10 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/KrauseFx/deliver/blob/master/Deliverfile.md
+
+###################### Automatically generated ######################
+# Feel free to remove the following lines if you use fastlane
+
+app_identifier "com.ealeksandrov.LoadCalc" # The bundle identifier of your app
+apple_id "1031546431" # This is NOT your Apple login ID, but the App ID of your app
+email "appstore@aleksandrov.ws" # the login email address

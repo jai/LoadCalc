@@ -10,3 +10,4 @@ pod 'ChameleonFramework'
 
 # Only for development
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+pod 'SimulatorStatusMagic', :configurations => ['Debug']

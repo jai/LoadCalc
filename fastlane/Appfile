@@ -1,0 +1,2 @@
+app_identifier "com.ealeksandrov.LoadCalc" # The bundle identifier of your app
+apple_id "appstore@aleksandrov.ws" # Your Apple email address

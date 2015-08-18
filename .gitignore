@@ -29,3 +29,7 @@ DerivedData/
 
 #CocoaPods
 Pods
+
+LoadCalc.app.dSYM.zip
+LoadCalc.ipa
+fastlane/screenshots
