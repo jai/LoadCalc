@@ -5,11 +5,15 @@ platform :ios, '7.0'
 # Yep.
 inhibit_all_warnings!
 
-pod 'APLKeyboardControls'
-pod 'ChameleonFramework'
-pod 'Fabric'
-pod 'Crashlytics'
+target "LoadCalc" do
 
-# Only for development
-pod 'Reveal-iOS-SDK', :configurations => ['Debug']
-pod 'SimulatorStatusMagic', :configurations => ['Debug']
+	pod 'APLKeyboardControls'
+	pod 'ChameleonFramework'
+	pod 'Fabric'
+	pod 'Crashlytics'
+
+	# Only for development
+	pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+	pod 'SimulatorStatusMagic', :configurations => ['Debug']
+
+end
